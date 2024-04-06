@@ -12,8 +12,9 @@ public class StackDemo06 {
             System.out.println("2. Pop");
             System.out.println("3. Peek");
             System.out.println("4. Print");
-            System.out.println("5. Keluar");
-            System.out.print("Pilih operasi (1-5): ");
+            System.out.println("5. Cari dan Tampilkan Data Pakaian dengan Harga Tertinggi");
+            System.out.println("6. Keluar");
+            System.out.print("Pilih operasi (1-6): ");
             int choice = sc.nextInt();
             sc.nextLine(); // Consume newline
 
@@ -30,7 +31,7 @@ public class StackDemo06 {
                     System.out.print("Harga: ");
                     double harga = sc.nextDouble();
                     sc.nextLine(); // Consume newline
-                    
+
                     Pakaian06 p = new Pakaian06(jenis, warna, merk, ukuran, harga);
                     stk.push(p);
                     break;
@@ -44,6 +45,9 @@ public class StackDemo06 {
                     stk.print();
                     break;
                 case 5:
+                    stk.getMax();
+                    break;
+                case 6:
                     System.out.println("Terima kasih!");
                     System.exit(0);
                     break;
